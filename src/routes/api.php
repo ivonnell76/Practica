@@ -7,14 +7,6 @@ use App\Http\Controllers\PonenteController;
 use App\Http\Controllers\AsistenteController;
 
 
-Route::get('/eventos', [EventoController::class, 'index']);
-Route::post('/eventos', [EventoController::class, 'store']);
-Route::get('/eventos/{id}', [EventoController::class, 'show']);
-Route::put('/eventos/{id}', [EventoController::class, 'update']);
-Route::delete('/eventos/{id}', [EventoController::class, 'destroy']);
-
-
-
 /**
 * Rutas públicas
 */
@@ -44,4 +36,14 @@ Route::post('/ponentes', [PonenteController::class, 'store']);
 Route::put('/ponentes/{ponente}', [PonenteController::class, 'update']);
 // Eliminar un ponente específico
 Route::delete('/ponentes/{id}', [PonenteController::class, 'destroy']);
-
+ // Recuperar todos los asistentes
+ Route::get('/asistentes', [AsistenteController::class, 'index']);
+ // Almacenar un asistente nuevo
+ Route::post('/asistentes', [AsistenteController::class, 'store']);
+// Recuperar un asistente específico
+ Route::get('/asistentes/{id}', [AsistenteController::class, 'show']);
+ // Actualizar un asistente específico
+ Route::put('/asistentes/{asistente}', [AsistenteController::class, 'update']);
+ // Eliminar un asistente específico
+ Route::delete('/asistentes/{id}', [AsistenteController::class, 'destroy']);
+});
