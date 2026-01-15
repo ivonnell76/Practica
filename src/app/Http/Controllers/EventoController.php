@@ -86,13 +86,13 @@ class EventoController extends Controller
     {
       $evento = Evento::find($id);
 
-      if (!$evento) {
-          $respuesta = [
-            'message' => 'Evento no encontrado',
-            'status' => 404,
-          ];
-          return response()->json($respuesta, 404);
-      }
+        if (!$evento) {
+            $respuesta = [
+              'message' => 'Evento no encontrado',
+              'status' => 404,
+           ];
+           return response()->json($respuesta, 404);
+       }
 
 
       $respuesta = [
